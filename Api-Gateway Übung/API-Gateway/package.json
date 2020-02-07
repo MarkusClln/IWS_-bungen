@@ -1,0 +1,21 @@
+{
+  "name": "marketing_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
+    "request": "^2.88.0",
+    "https": "^1.0.0",
+    "request-promise": "^4.2.5"
+  }
+}

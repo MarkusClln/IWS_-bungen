@@ -1,0 +1,32 @@
+version: '2'
+
+networks:
+  basketapi-dev:
+    driver: bridge
+    
+services:
+  basket:
+    image: basketimage:latest
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"     
+    environment:
+      DB_CONNECTION_STRING: "host=postgres_image;port=5432;database=basketdb;username=postgres;password=postgres"
+    networks:
+      - basketapi-dev  
+  
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432"
+    restart: always
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "basketdb"
+    networks:
+      - basketapi-dev
