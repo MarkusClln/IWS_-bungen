@@ -1,8 +1,8 @@
 {
   "Nodes": {
+    "productPORT": "3001",
     "basketPORT": "3002",
     "marketingPORT": "3003",
-    "productPORT": "3001",
     "paymentPORT": "3004"
   },
   "Gateway": {
