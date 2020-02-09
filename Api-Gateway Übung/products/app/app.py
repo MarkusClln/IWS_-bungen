@@ -8,8 +8,8 @@ app = Flask(__name__)
 DB_IP = os.getenv('DB_IP')
 PORT = os.getenv('PORT')
 myclient = pymongo.MongoClient("mongodb://"+DB_IP+":27017/")
-mydb = myclient["payment"]
-mycol = mydb["payments"]
+mydb = myclient["productcatalog"]
+mycol = mydb["product"]
 
 
 @app.route('/', methods=['GET', 'POST'])
